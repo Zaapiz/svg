@@ -44,8 +44,7 @@ function trackSecretInput(value) {
   </body>
 </html>`;
 
-    const secretUrl = URL.createObjectURL(new Blob([secretWebsiteHtml], { type: "text/html" }));
-    setTimeout(() => URL.revokeObjectURL(secretUrl), 60_000);
+    const secretUrl = `data:text/html;charset=utf-8,${encodeURIComponent(secretWebsiteHtml)}`;
     window.location.href = secretUrl;
   }
 }
