@@ -33,19 +33,7 @@ function trackSecretInput(value) {
   secretBuffer = (secretBuffer + value).slice(-secretCode.length);
 
   if (secretBuffer === secretCode) {
-    // PASTE YOUR SECRET WEBSITE HTML INSIDE THE TEMPLATE STRING BELOW.
-    const secretWebsiteHtml = `
-<!doctype html>
-<html>
-  <head><meta charset="utf-8"><title>Secret Website</title></head>
-  <body>
-    <h1>Secret Website</h1>
-    <p>Replace this HTML with your real secret website HTML.</p>
-  </body>
-</html>`;
-
-    const secretUrl = `data:text/html;charset=utf-8,${encodeURIComponent(secretWebsiteHtml)}`;
-    window.location.href = secretUrl;
+    window.location.href = "/secret.html";
   }
 }
 
